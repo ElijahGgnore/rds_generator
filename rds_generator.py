@@ -102,5 +102,5 @@ if __name__ == '__main__':
         resulting_image_path = args.source[:dot_index] \
                                + f'-autostereogram-xdpi_{args.xdpi}-od_{args.observer_distance}-es_{args.eye_separation}-esf_{args.stereo_separation_factor}' \
                                + args.source[dot_index:]
-    andrew_steer_rdt(img, args.xdpi, args.stereo_separation_factor, args.eye_separation,
+    andrew_steer_rds(img, args.xdpi, args.stereo_separation_factor, args.eye_separation,
                      args.observer_distance).save(resulting_image_path)
