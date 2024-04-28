@@ -12,7 +12,7 @@ DEFAULT_EYE_SEPARATION_INCHES = 2.5
 DEFAULT_OBSERVER_DISTANCE_INCHES = 12.0
 
 
-def andrew_steer_rdt(_img: Image, x_dpi: float = DEFAULT_X_DPI,
+def andrew_steer_rds(_img: Image, x_dpi: float = DEFAULT_X_DPI,
                      separation_factor: float = DEFAULT_EYE_SEPARATION_FACTOR,
                      eye_separation_inches: float = DEFAULT_EYE_SEPARATION_INCHES,
                      observer_distance_inches: float = DEFAULT_OBSERVER_DISTANCE_INCHES):
