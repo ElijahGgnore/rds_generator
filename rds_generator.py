@@ -1,6 +1,4 @@
 import argparse
-import sys
-import os
 from random import choice
 
 from PIL import Image
@@ -65,7 +63,7 @@ def andrew_steer_rds(_img: Image, x_dpi: float = DEFAULT_X_DPI,
     return Image.fromarray(autostereogram_array, 'RGB')
 
 
-if __name__ == '__main__':
+def main():
     # Parse the command-line arguments
     parser = argparse.ArgumentParser()
 
@@ -103,3 +101,7 @@ if __name__ == '__main__':
                                + args.source[dot_index:]
     andrew_steer_rds(img, args.xdpi, args.stereo_separation_factor, args.eye_separation,
                      args.observer_distance).save(resulting_image_path)
+
+
+if __name__ == '__main__':
+    main()
