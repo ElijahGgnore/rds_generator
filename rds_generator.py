@@ -65,7 +65,6 @@ def andrew_steer_rds(_img: Image, x_dpi: float = DEFAULT_X_DPI,
     return Image.fromarray(autostereogram_array, 'RGB')
 
 
-np.set_printoptions(threshold=sys.maxsize)
 if __name__ == '__main__':
     # Parse the command-line arguments
     parser = argparse.ArgumentParser()
