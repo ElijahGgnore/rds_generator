@@ -30,9 +30,9 @@ def andrew_steer_rds(_img: Image, x_dpi: float = DEFAULT_X_DPI,
         links_right = np.array([x for x in range(width)])
         for x, depth in enumerate(row):
             feature_z = max_depth - (depth / 256) * (max_depth - min_depth)
-            half_stereo_separation = int(eye_separation * (feature_z / (observer_distance + feature_z)) / 2)
-            x_left = x - half_stereo_separation
-            x_right = x + half_stereo_separation
+            stereo_separation = int(eye_separation * (feature_z / (observer_distance + feature_z)))
+            x_left = x - stereo_separation // 2
+            x_right = x_left + stereo_separation
 
             # Create links and remove hidden-surfaces
             visible = True
