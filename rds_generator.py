@@ -91,7 +91,6 @@ def main():
 
     # Load the specified depth map
     img = Image.open(args.source).convert('L')
-    resulting_image_path = ''
     if args.output_file:
         resulting_image_path = args.output_file
     else:  # Use the source name with a suffix if the resulting file was not passed
