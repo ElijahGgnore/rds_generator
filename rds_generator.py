@@ -55,11 +55,11 @@ def andrew_steer_rds(_img: Image, x_dpi: float = DEFAULT_X_DPI,
                     # Make links
                     links_left[x_right] = x_left
                     links_right[x_left] = x_right
-        for x_left, x_right in enumerate(links_left):
+        for x_right, x_left in enumerate(links_left):
             if x_left == x_right:
-                autostereogram_array[y, x_left] = choice((0, 255))
+                autostereogram_array[y, x_right] = choice((0, 255))
             else:
-                autostereogram_array[y, x_left] = autostereogram_array[y, x_right]
+                autostereogram_array[y, x_right] = autostereogram_array[y, x_left]
     return Image.fromarray(autostereogram_array, 'RGB')
 
 
