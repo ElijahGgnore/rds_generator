@@ -24,7 +24,7 @@ def andrew_steer_rds(_img: Image, x_dpi: float = DEFAULT_X_DPI,
     height = _img.height
     depth_map_array = np.asarray(_img)
 
-    autostereogram_array = np.zeros((width, height, 3), np.int8)
+    autostereogram_array = np.zeros((width, height, 3), np.uint8)
     for y, row in enumerate(depth_map_array):
         links_left = np.array([x for x in range(width)])
         links_right = np.array([x for x in range(width)])
